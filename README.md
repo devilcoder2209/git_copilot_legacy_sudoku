@@ -58,3 +58,17 @@ Use GitHub Copilot to refactor the code for this game to add more advanced featu
 - The game should be responsive and work well on both desktop and mobile devices.
 - UI colors should be visually appealing and accessible.
 - Completed and correct puzzles should display a congratulatory message with the time taken and hints used and ask for the user's name for Top 10 times.
+
+## Features Implemented
+
+Through refactoring with GitHub Copilot, the following features have been successfully implemented:
+- **Unique Solutions:** The puzzle generator now guarantees a single, unique valid solution.
+- **Difficulty Selector:** Choose between Easy, Medium, and Hard puzzles to adjust the number of removed clues.
+- **Timer:** A live timer tracks the duration of the current game.
+- **Hints:** A Hint button fetches the correct answer for one missing/incorrect cell, locking and highlighting it while tracking hints used.
+- **Live Input Validation:** Immediate visual feedback (red highlight) triggers as soon as you type an invalid number that conflicts with the same row, column, or 3x3 block.
+- **Check Solution Button:** Validates the entire board. If invalid, incorrect cells are highlighted red. This button automatically disables itself if there are live conflicts on the board.
+- **Dark Mode Toggle:** Easily switch between Light and Dark themes, with preferences saved locally.
+- **Responsive Design:** 3x3 sub-grids alternate in background color for readability, and the UI dynamically scales for mobile screens without breaking.
+- **Top 10 Leaderboard:** Winning the game asks for the player's name and saves their score (Time, Difficulty, Hints) in `localStorage`. The fastest 10 times are displayed under the board.
+- **Test Coverage:** Comprehensive `pytest` coverage added for all core game logic functions.
